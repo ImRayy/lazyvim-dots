@@ -7,3 +7,7 @@ local function map(m, k, v, opts)
 end
 
 map("n", "<leader>rn", ":IncRename ")
+map("n", "<leader>t", function()
+  Snacks.terminal()
+end)
+map("n", "C", ":BufferLinePickClose<cr>")
