@@ -22,11 +22,28 @@ return {
         },
         stdin = false,
       },
+      taplo = {
+        command = "taplo",
+        -- stylua: ignore
+        args = {
+          "fmt",
+          "--option", "align_entries=true",
+          "--option", "align_comments=true",
+          "--option", "reorder_keys=true",
+          "--option", 'indent_string="  "',
+          "--option", "column_width=100",
+          "--option", "trailing_newline=true",
+          "--option", "array_auto_expand=true",
+          "--option", "array_auto_collapse=true",
+          "-"
+        },
+      },
     },
 
     formatters_by_ft = {
       nix = { "alejandra" },
       sql = { "sql_formatter" },
+      toml = { "taplo" },
     },
   },
 }
